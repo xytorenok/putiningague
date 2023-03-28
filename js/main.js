@@ -3,25 +3,45 @@ const outputTest = document.getElementById('code-output')
 const outputTestBefore = document.getElementById('code-output-before')
 const outputTestAfter = document.getElementById('code-output-after')
 const putin = document.querySelector('.face')
+const editor = document.getElementById('editor')
+const submit = document.getElementById('next')
 
-window.onload = function() {
-    document.getElementById('code').focus();
-  };
+const solution = 'justify-content:end'
+
+code.focus();
 
 code.addEventListener('input', () => {
-    code.value = code.value;
-    outputTest.textContent = code.value;
+  const [prop, value] = code.value.split(':')
 
-    const valueBeforeColon = code.value.substring(0, code.value.indexOf(':'));
-    outputTestBefore.textContent = valueBeforeColon;
+  // outputTest.textContent = code.value;
+  // outputTestBefore.textContent = valueBeforeColon;
+  // outputTestAfter.textContent = valueAfterColon;
 
-    const valueAfterColon = code.value.substring(code.value.indexOf(':') + 1);
-    outputTestAfter.textContent = valueAfterColon;
-
-    putin.style[valueBeforeColon] = valueAfterColon;
-    
+  putin.style[prop] = value;
+  checkSolution()
 });
 
+function checkSolution() {
+  editor.classList.toggle('solved', code.value.replace(/(:) *|([^;]);?$/g, '$1$2') == solution)
+  outputTest.textContent = code.value.replace(/(:) *|([^;]);?$/g, '$1$2');
+}
 
 
+code.addEventListener('keydown', function (event) {
+  if (event.key === 'Enter') {
+    event.preventDefault();
+    if (editor.matches('.solved')) {
+      showNext()
+    } else {
+      shake()
+    }
+  }
+});
 
+function shake() {
+  editor.classList.add('shake')
+
+  editor.onanimationend = () => {
+    editor.classList.remove('shake')
+  }
+}
