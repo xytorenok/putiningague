@@ -16,20 +16,21 @@
 
   <link rel="stylesheet" href="css/reset.css">
   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/media.css">
 
   <script src="js/main.js" defer></script>
 </head>
 
 <body>
-  <section id="sidebar">
+  <section id="sidebar" >
+    <a href="index.html" class="language">English language</a>
     <div id="information">
       <h1>Гаазький процес</h1>
-      <div id="pagination">
+      <div id="pagination" style="display:none">
         <a href="#" id="prev-page">&lt;</a>
         <div id="page-links"></div>
         <a href="#" id="next-page">&gt;</a>
       </div>
-      <a href="index.html" class="language">English language</a>
       <details id="mission-info">
         <summary>Що я маю робити?</summary>
         <p class="history-text">Настав час допомогти російському уряду знайти Гаазькі суди. Використовуючи магію веб програмування, відправте Путіна та його уряд до Гаазького суду.</p>
@@ -52,8 +53,7 @@
 
       <details id="example-info">
         <summary>Приклад</summary>
-        <p class="example-text"><span>justify-content: center;</span> will send Putin to the middle of the road to the
-          Hague court</p>
+        <p class="example-text"><span>justify-content: center;</span> відправить Путіна на середину шляху до Гаакського суду</p>
       </details>
 
     </div>
@@ -76,14 +76,15 @@
         <textarea id="code"></textarea>
         <pre id="selector-end"><span class="parenthesis">&#125;</span></pre>
         <pre id="comment">Скопіюй рядок
-          justify-content:end;
-в область введення вище для того, щоб побачити результат</pre>
+      justify-content:end;
+в область введення вище для того,
+щоб побачити результат</pre>
       </div>
 
       <button id="next">go</button>
     </div>
 
-    <p class="test-area">Поле тестового вывода: <span id="code-output"></span></p>
+    <!-- <p class="test-area">Поле тестового вывода: <span id="code-output"></span></p> -->
     <!-- 
     <p class="test-area">Поле тестового вывода before colon: <span id="code-output-before"></span></p>
     <p class="test-area">Поле тестового вывода after colon: <span id="code-output-after"></span></p> -->

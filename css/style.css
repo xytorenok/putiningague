@@ -10,16 +10,15 @@ body {
 #sidebar {
     position: relative;
     background-color: #fccd02;
-    min-width: 50%;
-    height: 100%;
+    min-width: 45%;
     padding: 1em;
 }
 
 #road-map-to-the-hague {
     position: relative;
     background-color: #007d59;
-    min-width: 50%;
-    height: 100%;
+    min-width: 55%;
+    min-height: 500px;
     padding: 1em;
     display: flex;
     justify-content: center;
@@ -35,6 +34,10 @@ body {
     position: absolute;
     right: 1em;
     top: 2em;
+}
+
+details{
+    margin-bottom: 10px;
 }
 
 .task-text span,
@@ -119,9 +122,9 @@ body {
 #board {
     position: absolute;
     max-width: 550px;
-    width: 100%;
+    width: 90%;
     max-height: 550px;
-    height: 100%;
+    height: 90%;
     background-color: #3B806C;
     border-radius: 20px;
     display: flex;

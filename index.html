@@ -16,20 +16,21 @@
 
   <link rel="stylesheet" href="css/reset.css">
   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/media.css">
 
   <script src="js/main.js" defer></script>
 </head>
 
 <body>
   <section id="sidebar">
+    <a href="ukr.html" class="language">Українська мова</a>
     <div id="information">
       <h1>Haager Prozess</h1>
-      <div id="pagination">
+      <div id="pagination" style="display:none">
         <a href="#" id="prev-page">&lt;</a>
         <div id="page-links"></div>
         <a href="#" id="next-page">&gt;</a>
       </div>
-      <a href="ukr.html" class="language">Українська мова</a>
       <details id="mission-info">
         <summary>What i have to do?</summary>
         <p class="history-text">It's time to help the Russian government find the Hague courts. Using 'flexboxes', move
@@ -77,14 +78,15 @@
         <textarea id="code"></textarea>
         <pre id="selector-end"><span class="parenthesis">&#125;</span></pre>
         <pre id="comment">Copy the line
-          justify-content:end;
-to the input area above to see the result</pre>
+      justify-content:end;
+to the input area above
+to see the result</pre>
       </div>
 
       <button id="next">go</button>
     </div>
 
-    <p class="test-area">Поле тестового вывода: <span id="code-output"></span></p>
+    <!-- <p class="test-area">Поле тестового вывода: <span id="code-output"></span></p> -->
     <!-- 
     <p class="test-area">Поле тестового вывода before colon: <span id="code-output-before"></span></p>
     <p class="test-area">Поле тестового вывода after colon: <span id="code-output-after"></span></p> -->
