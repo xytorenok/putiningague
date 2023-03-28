@@ -57,6 +57,9 @@ code.addEventListener('input', () => {
   if(cleanValue !== 'end'){
     face.style[prop] = 'flex-start'
   }
+  if(cleanValue == 'center'){
+    face.style[prop] = 'center'
+  }
   checkSolution()
 });
 
