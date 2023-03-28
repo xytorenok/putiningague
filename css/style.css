@@ -40,6 +40,10 @@ details{
     margin-bottom: 10px;
 }
 
+.task-text{
+    margin-bottom: 10px;
+}
+
 .task-text span,
 .task-rules-list li span,
 .example-text span {
@@ -132,13 +136,13 @@ details{
 }
 
 .court {
-    width: 20%;
-    height: 20%;
+    width: 25%;
+    height: 25%;
     display: flex;
     justify-content: center;
     align-items: center;
     position: absolute;
-    z-index: 5;
+    z-index: 4;
 }
 
 .face {
@@ -151,8 +155,8 @@ details{
 }
 
 .putin {
-    width: 20%;
-    height: 20%;
+    width: 30%;
+    height: 30%;
     display: flex;
     justify-content: center;
     align-items: center;
