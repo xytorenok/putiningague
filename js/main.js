@@ -19,6 +19,7 @@ closeTab()
 function textMission() {
   detailsMissionInfo.addEventListener('toggle', function () {
     if (detailsMissionInfo.open) {
+      detailsMissionInfo.querySelector('audio').volume = 0.4
       detailsMissionInfo.querySelector('audio').play();
       detailsTaskInfo.open = false
       detailsExampleInfo.open = false
@@ -62,7 +63,7 @@ code.addEventListener('input', () => {
 function checkSolution() {
   editor.classList.toggle('solved', code.value.replace(/(:) *|([^;]);?$/g, '$1$2') == solution)
   if (editor.classList.contains('solved')) {
-    audioWelcomeToHaager.volume = 0.2
+    audioWelcomeToHaager.volume = 0.4
     audioWelcomeToHaager.play();
   }
   // outputTest.textContent = code.value.replace(/(:) *|([^;]);?$/g, '$1$2');
@@ -94,7 +95,7 @@ function shake() {
 }
 
 function showNext() {
-  audioWelcomeToHaager.play()
+  // audioWelcomeToHaager.play()
 }
 
 // -------------------------------------------
