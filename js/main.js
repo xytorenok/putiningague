@@ -3,6 +3,7 @@ const outputTest = document.getElementById('code-output')
 const outputTestBefore = document.getElementById('code-output-before')
 const outputTestAfter = document.getElementById('code-output-after')
 const face = document.querySelector('.face')
+const putin = document.querySelector('.putin')
 const editor = document.getElementById('editor')
 const submit = document.getElementById('next')
 const audioWelcomeToHaager = document.getElementById('audio-welcome-to-haager')
@@ -65,8 +66,8 @@ function checkSolution() {
   if (editor.classList.contains('solved')) {
     audioWelcomeToHaager.volume = 0.4
     audioWelcomeToHaager.play();
+    putin.style.opacity = 0.8
   }
-  // outputTest.textContent = code.value.replace(/(:) *|([^;]);?$/g, '$1$2');
 }
 
 function missionComplete() {
